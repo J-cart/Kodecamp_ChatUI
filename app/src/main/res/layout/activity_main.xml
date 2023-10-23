@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/search_background"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Search Your Friend" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/recent_chat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Recent Message"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_chat_rv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/top_chat_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categories_rv"
+        tools:listitem="@layout/profile_viewholder" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        tools:listitem="@layout/categories_viewholder" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recent_chats_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipChildren="false"
+        android:clipToOutline="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recent_chat_text"
+        tools:listitem="@layout/recent_chat_viewholder" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/loading_anim"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorSurface"
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:itemTextColor="@drawable/bottom_nav_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

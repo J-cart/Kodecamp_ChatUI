@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Kodecamp ChatUI</string>
+    <string name="empty_state">some text here</string>
+</resources>
