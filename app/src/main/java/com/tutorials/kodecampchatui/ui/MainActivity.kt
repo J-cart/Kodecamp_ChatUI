@@ -1,4 +1,4 @@
-package com.tutorials.kodecampchatui
+package com.tutorials.kodecampchatui.ui
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -6,10 +6,17 @@ import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.tutorials.kodecampchatui.adapters.CategoriesAdapter
-import com.tutorials.kodecampchatui.adapters.FriendsAdapter
-import com.tutorials.kodecampchatui.adapters.MessagesAdapter
+import com.tutorials.kodecampchatui.R
+import com.tutorials.kodecampchatui.data.categoryList
+import com.tutorials.kodecampchatui.data.friendList
+import com.tutorials.kodecampchatui.data.getAllMessages
+import com.tutorials.kodecampchatui.data.model.Category
+import com.tutorials.kodecampchatui.data.model.ChatMessage
+import com.tutorials.kodecampchatui.data.model.FriendProfile
 import com.tutorials.kodecampchatui.databinding.ActivityMainBinding
+import com.tutorials.kodecampchatui.ui.adapters.CategoriesAdapter
+import com.tutorials.kodecampchatui.ui.adapters.FriendsAdapter
+import com.tutorials.kodecampchatui.ui.adapters.MessagesAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

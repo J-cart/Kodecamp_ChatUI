@@ -1,17 +1,10 @@
-package com.tutorials.kodecampchatui
+package com.tutorials.kodecampchatui.data
 
-data class ChatMessage(
-    val id: Int = 0,
-    val profile: FriendProfile = FriendProfile(),
-    val recentMessage: String = ""
-)
+import com.tutorials.kodecampchatui.R
+import com.tutorials.kodecampchatui.data.model.Category
+import com.tutorials.kodecampchatui.data.model.ChatMessage
+import com.tutorials.kodecampchatui.data.model.FriendProfile
 
-
-data class FriendProfile(
-    val id: Int = 0,
-    val profileImg: Int = 0,
-    val userName: String = ""
-)
 
 val imageList = listOf(
     R.drawable.image_1,

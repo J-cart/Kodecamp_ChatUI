@@ -1,4 +1,4 @@
-package com.tutorials.kodecampchatui.adapters
+package com.tutorials.kodecampchatui.ui.adapters
 
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.tutorials.kodecampchatui.Category
+import com.tutorials.kodecampchatui.data.model.Category
 import com.tutorials.kodecampchatui.R
 import com.tutorials.kodecampchatui.databinding.CategoriesViewholderBinding
 

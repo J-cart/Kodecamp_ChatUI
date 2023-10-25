@@ -1,4 +1,4 @@
-package com.tutorials.kodecampchatui
+package com.tutorials.kodecampchatui.data.model
 
 data class Category(
     val id:Int = 0,
