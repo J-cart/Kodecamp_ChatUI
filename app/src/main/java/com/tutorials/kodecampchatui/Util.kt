@@ -13,6 +13,14 @@ data class FriendProfile(
     val userName: String = ""
 )
 
+val imageList = listOf(
+    R.drawable.image_1,
+    R.drawable.image_2,
+    R.drawable.image_3,
+    R.drawable.image_4,
+    R.drawable.image_5,
+)
+
 val categoryList = mutableListOf(
     Category(
         id = 1,
@@ -35,102 +43,102 @@ val categoryList = mutableListOf(
 val friendList = listOf(
     FriendProfile(
         id = 1,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Morgan Ford Bill"
     ),
     FriendProfile(
         id = 2,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Dainee Russel"
     ),
     FriendProfile(
         id = 3,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Marvin Mckindaey"
     ),
     FriendProfile(
         id = 4,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Esther Howard"
     ),
     FriendProfile(
         id = 5,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Sam Smith"
     ),
     FriendProfile(
         id = 6,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Morgan Bill"
     ),
     FriendProfile(
         id = 7,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Ford Bill"
     ),
     FriendProfile(
         id = 8,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Howard Esther"
     ),
     FriendProfile(
         id = 9,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Mckindaey Marvin"
     ),
     FriendProfile(
         id = 10,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Russel Dainee"
     ),
     FriendProfile(
         id = 11,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Russel Bill"
     ),
     FriendProfile(
         id = 12,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Morgan Dainee"
     ),
     FriendProfile(
         id = 13,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Mckindaey Morgan "
     ),
     FriendProfile(
         id = 14,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Howard Morgan "
     ),
     FriendProfile(
         id = 15,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Bill Howard"
     ),
     FriendProfile(
         id = 16,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Morgan Esther Bill"
     ),
     FriendProfile(
         id = 17,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Marvin Bill"
     ),
     FriendProfile(
         id = 18,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Morgan Smith"
     ),
     FriendProfile(
         id = 19,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Sam Morgan "
     ),
     FriendProfile(
         id = 20,
-        profileImg = R.drawable.dia_cooking,
+        profileImg = imageList.random(),
         userName = "Morgan Smith Bill"
     ),
 )

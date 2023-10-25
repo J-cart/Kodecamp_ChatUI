@@ -16,7 +16,6 @@ class CategoriesAdapter()  : ListAdapter<Category, CategoriesAdapter.ViewHolder>
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = CategoriesViewholderBinding.bind(view)
         private val selectedTypedValue = TypedValue()
-        private val unSelectedTypedValue = TypedValue()
         private val theme = itemView.context.theme
         fun bind(category: Category) {
             binding.apply {
@@ -28,22 +27,14 @@ class CategoriesAdapter()  : ListAdapter<Category, CategoriesAdapter.ViewHolder>
                         true
                     )
                     val color = selectedTypedValue.data
-//                    categoryText.textSize = 18f
                     val underLineParams = underLine.layoutParams
                     underLineParams.height = 8
                     underLine.setBackgroundColor(color)
 
                 } else {
-                    theme.resolveAttribute(
-                        com.google.android.material.R.attr.errorTextColor,
-                        unSelectedTypedValue,
-                        true
-                    )
-                    val color = unSelectedTypedValue.data
-//                    categoryText.textSize = 16f
                     val underLineParams = underLine.layoutParams
                     underLineParams.height = 2
-                    underLine.setBackgroundColor(ContextCompat.getColor(itemView.context,R.color.some_grey))
+                    underLine.setBackgroundColor(ContextCompat.getColor(itemView.context,R.color.search_background_color))
 
                 }
                 root.setOnClickListener {

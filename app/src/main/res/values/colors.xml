@@ -6,4 +6,6 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="some_grey">#EDEDED</color>
+    <color name="grey_4">#66202424</color>
+    <color name="search_background_color">#EDEDED</color>
 </resources>

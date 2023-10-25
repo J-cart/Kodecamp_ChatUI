@@ -23,7 +23,7 @@
         android:layout_height="16dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/circle_background"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#0EFF18"
         android:clipToOutline="true"
         app:layout_constraintBottom_toBottomOf="@id/profile_img"
         app:layout_constraintEnd_toEndOf="@id/profile_img" />

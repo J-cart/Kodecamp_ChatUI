@@ -1,8 +1,11 @@
 package com.tutorials.kodecampchatui
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.tutorials.kodecampchatui.adapters.CategoriesAdapter
 import com.tutorials.kodecampchatui.adapters.FriendsAdapter
 import com.tutorials.kodecampchatui.adapters.MessagesAdapter
@@ -61,5 +64,34 @@ class MainActivity : AppCompatActivity() {
     private fun changeSearchViewPlate(){
         val searchPlate = binding.searchBar.findViewById<View>(androidx.appcompat.R.id.search_plate)
         searchPlate.setBackgroundResource(R.drawable.transparent_background)
+    }
+
+    private fun toggleUIMode(){
+        val search = binding.searchBar
+        val searchEditText =
+            search.findViewById(androidx.appcompat.R.id.search_src_text) as EditText
+
+        val blackColor = ContextCompat.getColor(
+            this,
+            R.color.black
+        )
+        val greyColor = ContextCompat.getColor(
+            this,
+            R.color.grey_4
+        )
+
+        val nightModeFlags = this.resources.configuration.uiMode and
+                Configuration.UI_MODE_NIGHT_MASK
+        when (nightModeFlags) {
+            Configuration.UI_MODE_NIGHT_YES -> {
+                searchEditText.setHintTextColor(blackColor)
+                searchEditText.setTextColor(blackColor)
+            }
+            Configuration.UI_MODE_NIGHT_NO -> {
+                searchEditText.setHintTextColor(greyColor)
+                searchEditText.setTextColor(blackColor)
+            }
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> searchEditText.setHintTextColor(blackColor)
+        }
     }
 }
